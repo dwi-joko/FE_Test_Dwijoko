@@ -54,7 +54,7 @@ p {
   background: url(../assets/Bg-section-1.jpg);
   background-position: top center;
   background-size: cover;
-  padding: 4rem 0;
+  padding: 12rem 0 4rem;
 }
 
 .section {
@@ -198,6 +198,8 @@ p {
   background: url(../assets/leaf-2.png);
   background-repeat: no-repeat;
   background-size: contain;
+  animation: spin 6s;
+  animation-iteration-count: infinite;
 }
 
 .notes {
@@ -259,12 +261,44 @@ p {
   position: absolute;
   left: -13rem;
   top: -9rem;
+  animation-name: bounce-2;
+  animation-timing-function: linear;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce-2 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .content .bottom-right {
   position: absolute;
   bottom: -16rem;
   left: -4rem;
+  animation-name: bounce-3;
+  animation-timing-function: linear;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce-3 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .content .couple {
@@ -278,6 +312,8 @@ p {
 .couple .family:first-child img {
   right: -2rem;
   top: -2rem;
+  animation: spin 7s;
+  animation-iteration-count: infinite;
 }
 
 .couple .family {
@@ -286,12 +322,47 @@ p {
 
 .couple .family:last-child img {
   left: -4rem;
+  animation: spin 4s;
+  animation-iteration-count: infinite;
+}
+
+.section-home path {
+  fill: transparent;
+  width: 100%;
+  position: relative;
+}
+
+.section-home text {
+  fill: #5c6958;
+}
+
+.section-home textPath {
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+
+.section-home svg {
+  position: absolute;
+  left: 0;
+  text-align: center;
+  top: 6rem;
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  z-index: 9;
+  position: relative;
 }
 
 /* Mobile */
 @media screen and (max-width: 480px) {
   .section-home {
-    padding: 0rem 0 3rem;
+    padding: 8rem 0 3rem;
+  }
+
+  .section-home svg {
+    top: 4rem;
   }
 
   .small-screen h1 {
